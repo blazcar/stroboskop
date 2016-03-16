@@ -42,10 +42,14 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
+		document.getElementById("start").innerHTML = "Zaženi stroboskop";
+		document.querySelector("#start").addEventListener('click', zagon);
 	}
+	document.querySelector("#start").addEventListener('click', stop);
 	
 	var zagon = function(event) {
 		vrednosti = [];
+		ustavi = false;
 		var barve = document.querySelectorAll("#barve > button");
 		for (i = 0; i < barve.length; i++) {
 			var barva = barve[i];
