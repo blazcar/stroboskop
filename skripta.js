@@ -12,6 +12,14 @@ window.addEventListener('load', function() {
 	document.querySelector("#novaBarva") 
 		.addEventListener('click', dodajBarvo);
 		
+	var odstraniBarve = function(event){
+		var barve = document.getElementById("barve");
+		while(barve.childElementCount != 0){
+			barve.removeChild(barve.firstChild);
+		}
+	}
+	document.querySelector("#odstraniBarve").addEventListener('click',odstraniBarve);
+		
 	//Odstrani barve
 	
 	//Stroboskop
